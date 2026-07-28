@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
       { title: "BlueGuava — Smart Technology for a Smarter World" },
       { name: "description", content: "BlueGuava builds intelligent software, robust networks, and scalable systems that power businesses and communities across Africa." },
       { property: "og:title", content: "BlueGuava — Smart Technology for a Smarter World" },
-      { property: "og:description", content: "Enterprise software, cloud infrastructure, surveillance, IT & training solutions built for Africa." },
+      { property: "og:description", content: "BlueGuava builds intelligent software, robust networks, and scalable systems that power businesses and communities across Africa." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
