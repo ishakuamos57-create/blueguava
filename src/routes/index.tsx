@@ -694,24 +694,34 @@ function ContactSection() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            onSubmit={(e) => e.preventDefault()}
+            name="blueguava-contact"
+            method="POST"
+            action="/thanks"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
             className="rounded-3xl border border-white/10 bg-white/10 p-8 backdrop-blur-xl"
           >
             <h3 className="text-2xl font-bold">Send Us a Message</h3>
             <div className="mt-6 space-y-4">
+              <input type="hidden" name="form-name" value="blueguava-contact" />
+              <p className="hidden">
+                <label>
+                  Don't fill this out if you're human: <input name="bot-field" />
+                </label>
+              </p>
               {[
-                { label: "Your Name", type: "text", placeholder: "Full name" },
-                { label: "Industry / Organization", type: "text", placeholder: "Company or industry" },
-                { label: "Email Address", type: "email", placeholder: "you@company.com" },
+                { label: "Your Name", name: "name", type: "text", placeholder: "Full name" },
+                { label: "Industry / Organization", name: "organization", type: "text", placeholder: "Company or industry" },
+                { label: "Email Address", name: "email", type: "email", placeholder: "you@company.com" },
               ].map((f) => (
                 <div key={f.label}>
                   <label className="text-xs font-semibold uppercase tracking-wider text-brand-1">{f.label}</label>
-                  <input type={f.type} placeholder={f.placeholder} className="mt-1.5 w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-brand-1 focus:outline-none" />
+                  <input name={f.name} type={f.type} placeholder={f.placeholder} required className="mt-1.5 w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-brand-1 focus:outline-none" />
                 </div>
               ))}
               <div>
                 <label className="text-xs font-semibold uppercase tracking-wider text-brand-1">Message / Project Details</label>
-                <textarea rows={4} placeholder="Tell us about your project..." className="mt-1.5 w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-brand-1 focus:outline-none" />
+                <textarea name="message" rows={4} placeholder="Tell us about your project..." required className="mt-1.5 w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-brand-1 focus:outline-none" />
               </div>
               <button type="submit" className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-brand py-3.5 text-sm font-semibold uppercase tracking-wider text-white shadow-brand transition-transform hover:scale-[1.02]">
                 Send Message <ArrowRight size={16} />
