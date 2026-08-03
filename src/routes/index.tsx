@@ -672,9 +672,9 @@ function ContactSection() {
 
             <div className="mt-10 space-y-4">
               {[
-                { icon: Phone, label: "Phone Number", value: "+234 813 530 3867", href: "tel:+2348135303867" },
-                { icon: Mail, label: "Email Address", value: "hello@blueguava.com", href: "mailto:hello@blueguava.com" },
-                { icon: MapPin, label: "Office Location", value: "69 Road, 6th Avenue, Gwarinpa, Abuja." },
+                { icon: Phone, label: "Phone Number", value: "09052889840", href: "tel:+2349052889840" },
+                { icon: Mail, label: "Email Address", value: "blueguavang@gmail.com", href: "mailto:blueguavang@gmail.com" },
+                { icon: MapPin, label: "Office Location", value: "65B ACFM Close, Behind Bakka Oil, Bako Kwali, Abuja." },
               ].map((c) => {
                 const Wrap = c.href ? "a" : "div";
                 return (
