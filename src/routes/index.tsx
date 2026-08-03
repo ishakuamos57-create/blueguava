@@ -138,9 +138,14 @@ const suite = [
 ];
 
 const team = [
-  { name: "Abdulrasheed Musa", role: "Chief Executive Officer", bio: "Over 15 years implementing flagship technological platforms and national networks across Sub-Saharan Africa.", img: ceo.url },
+  { name: "GEORGE, Olufemi O.", role: "Chief Data Officer", bio: "Full-Stack Engineer and Technical Co-Founder with 9+ years of experience building scalable web applications, backend services, and distributed systems using Next.js, React, Node.js, TypeScript, and PostgreSQL. Experienced in delivering products from architecture to deployment, including multi-tenant SaaS platforms, secure APIs, fintech solutions, Web3 applications, and third-party integrations.", img: null },
+  { name: "Abdulrasheed Musa", role: "Chief Information Officer", bio: "Over 15 years implementing flagship technological platforms and national networks across Sub-Saharan Africa.", img: ceo.url },
   { name: "Solomon Yakubu", role: "Chief Technology Officer", bio: "Expert in microservice integrations, secure high scale database setups, and robust enterprise platform architectures.", img: cto.url },
+  { name: "EMMANUEL, O. VICTOR", role: "Chief Financial Officer", bio: "Building a challenging career based on diligence in a unique and performance driven organization, putting effort in fulfilling my employer's goal, while leveraging my skills to continually contribute to the attainment of the organizational objectives and my career development.", img: null },
+  { name: "Tukura Zhimane Aquila", role: "Full Stack Developer", bio: "A passionate Full Stack Developer specializing in building modern, responsive, and scalable web applications and websites. Skilled in front-end and back-end development, API integration, database management, and cloud deployment, with a strong interest in data science and artificial intelligence. Committed to delivering clean, efficient, and user-focused digital solutions that solve real-world problems.", img: null },
+  { name: "HABAKKUK ETSU LUCKY", role: "Digital Forensic Professional", bio: "Motivated and detail-oriented Cybersecurity Science graduate with a Second Class Upper degree from the Federal University of Technology, Minna. Passionate about cybersecurity, digital forensics, information security, and digital literacy. Possesses a strong foundation in networking, operating systems, cybersecurity principles, and computer operations, complemented by leadership experience during the National Youth Service Corps (NYSC). Eager to contribute to organizational growth while continuously developing practical cybersecurity and IT skills.", img: null },
 ];
+
 
 const sectors = [
   { icon: Landmark, label: "Government Agencies" },
@@ -588,11 +593,20 @@ function TeamSection() {
               className="group overflow-hidden rounded-3xl bg-white shadow-soft transition-all hover:shadow-brand"
             >
               <div className="relative aspect-[4/5] overflow-hidden">
-                <motion.img
-                  src={member.img}
-                  alt={member.name}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                {member.img ? (
+                  <motion.img
+                    src={member.img}
+                    alt={member.name}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center bg-gradient-brand">
+                    <span className="text-5xl font-bold text-white/90">
+                      {member.name.replace(/[^A-Za-z, ]/g, "").split(/[\s,]+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join("")}
+                    </span>
+                  </div>
+                )}
+
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-5/95 via-brand-5/40 to-transparent p-6">
                   <div className="text-xs font-semibold uppercase tracking-widest text-brand-1">{member.role}</div>
                   <div className="mt-1 text-2xl font-bold text-white">{member.name}</div>
@@ -658,9 +672,9 @@ function ContactSection() {
 
             <div className="mt-10 space-y-4">
               {[
-                { icon: Phone, label: "Phone Number", value: "+234 813 530 3867", href: "tel:+2348135303867" },
-                { icon: Mail, label: "Email Address", value: "hello@blueguava.com", href: "mailto:hello@blueguava.com" },
-                { icon: MapPin, label: "Office Location", value: "69 Road, 6th Avenue, Gwarinpa, Abuja." },
+                { icon: Phone, label: "Phone Number", value: "09052889840", href: "tel:+2349052889840" },
+                { icon: Mail, label: "Email Address", value: "blueguavang@gmail.com", href: "mailto:blueguavang@gmail.com" },
+                { icon: MapPin, label: "Office Location", value: "65B ACFM Close, Behind Bakka Oil, Bako Kwali, Abuja." },
               ].map((c) => {
                 const Wrap = c.href ? "a" : "div";
                 return (
