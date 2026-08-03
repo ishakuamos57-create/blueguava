@@ -16,10 +16,6 @@ import infra from "@/assets/xenolink_overview.png.asset.json";
 import testBenjamin from "@/assets/test-benjamin.jpg.asset.json";
 import ceo from "@/assets/abdulrasheed-musa-ceo.jpeg.asset.json";
 import cto from "@/assets/solomon-yakubu-cto.jpeg.asset.json";
-import cmo from "@/assets/patience-musa-cmo.jpg.asset.json";
-import coo from "@/assets/hamza-jimoh-coo.jpeg.asset.json";
-import bde from "@/assets/immature-ibrahim.jpeg.asset.json";
-import netEng from "@/assets/luqman-abubakar.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -171,7 +167,7 @@ function Navbar() {
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="fixed left-1/2 top-4 z-50 w-[95%] max-w-6xl -translate-x-1/2"
+      className="fixed left-1/2 top-14 z-50 w-[95%] max-w-6xl -translate-x-1/2"
     >
       <div className="flex items-center justify-between rounded-full border border-white/60 bg-white/80 px-4 py-2.5 shadow-soft backdrop-blur-xl">
         <a href="#" className="flex items-center gap-2">
@@ -748,9 +744,25 @@ function Footer() {
   );
 }
 
+function PartnerBanner() {
+  return (
+    <motion.div
+      initial={{ y: -40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      className="fixed inset-x-0 top-0 z-[60] bg-gradient-deep py-2.5 px-4 text-center shadow-brand"
+    >
+      <p className="text-xs font-bold uppercase tracking-[0.15em] text-white md:text-sm">
+        BlueGuava &amp; Xenolink Are Officially Development Partners
+      </p>
+    </motion.div>
+  );
+}
+
 function HomePage() {
   return (
     <main className="min-h-screen bg-background">
+      <PartnerBanner />
       <Navbar />
       <Hero />
       <OverviewSection />
