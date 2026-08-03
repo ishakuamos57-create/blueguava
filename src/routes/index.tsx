@@ -16,6 +16,10 @@ import infra from "@/assets/xenolink_overview.png.asset.json";
 import testBenjamin from "@/assets/test-benjamin.jpg.asset.json";
 import ceo from "@/assets/abdulrasheed-musa-ceo.jpeg.asset.json";
 import cto from "@/assets/solomon-yakubu-cto.jpeg.asset.json";
+import olufemi from "@/assets/olufemi-george.jpeg.asset.json";
+import emmanuel from "@/assets/emmanuel-victor.jpeg.asset.json";
+import tukura from "@/assets/tukura-aquila.jpeg.asset.json";
+import habakkuk from "@/assets/habakkuk-lucky.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
