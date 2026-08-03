@@ -16,6 +16,10 @@ import infra from "@/assets/xenolink_overview.png.asset.json";
 import testBenjamin from "@/assets/test-benjamin.jpg.asset.json";
 import ceo from "@/assets/abdulrasheed-musa-ceo.jpeg.asset.json";
 import cto from "@/assets/solomon-yakubu-cto.jpeg.asset.json";
+import olufemi from "@/assets/olufemi-george.jpeg.asset.json";
+import emmanuel from "@/assets/emmanuel-victor.jpeg.asset.json";
+import tukura from "@/assets/tukura-aquila.jpeg.asset.json";
+import habakkuk from "@/assets/habakkuk-lucky.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -138,12 +142,12 @@ const suite = [
 ];
 
 const team = [
-  { name: "GEORGE, Olufemi O.", role: "Chief Data Officer", bio: "Full-Stack Engineer and Technical Co-Founder with 9+ years of experience building scalable web applications, backend services, and distributed systems using Next.js, React, Node.js, TypeScript, and PostgreSQL. Experienced in delivering products from architecture to deployment, including multi-tenant SaaS platforms, secure APIs, fintech solutions, Web3 applications, and third-party integrations.", img: null },
+  { name: "GEORGE, Olufemi O.", role: "Chief Data Officer", bio: "Full-Stack Engineer and Technical Co-Founder with 9+ years of experience building scalable web applications, backend services, and distributed systems using Next.js, React, Node.js, TypeScript, and PostgreSQL. Experienced in delivering products from architecture to deployment, including multi-tenant SaaS platforms, secure APIs, fintech solutions, Web3 applications, and third-party integrations.", img: olufemi.url },
   { name: "Abdulrasheed Musa", role: "Chief Information Officer", bio: "Over 15 years implementing flagship technological platforms and national networks across Sub-Saharan Africa.", img: ceo.url },
   { name: "Solomon Yakubu", role: "Chief Technology Officer", bio: "Expert in microservice integrations, secure high scale database setups, and robust enterprise platform architectures.", img: cto.url },
-  { name: "EMMANUEL, O. VICTOR", role: "Chief Financial Officer", bio: "Building a challenging career based on diligence in a unique and performance driven organization, putting effort in fulfilling my employer's goal, while leveraging my skills to continually contribute to the attainment of the organizational objectives and my career development.", img: null },
-  { name: "Tukura Zhimane Aquila", role: "Full Stack Developer", bio: "A passionate Full Stack Developer specializing in building modern, responsive, and scalable web applications and websites. Skilled in front-end and back-end development, API integration, database management, and cloud deployment, with a strong interest in data science and artificial intelligence. Committed to delivering clean, efficient, and user-focused digital solutions that solve real-world problems.", img: null },
-  { name: "HABAKKUK ETSU LUCKY", role: "Digital Forensic Professional", bio: "Motivated and detail-oriented Cybersecurity Science graduate with a Second Class Upper degree from the Federal University of Technology, Minna. Passionate about cybersecurity, digital forensics, information security, and digital literacy. Possesses a strong foundation in networking, operating systems, cybersecurity principles, and computer operations, complemented by leadership experience during the National Youth Service Corps (NYSC). Eager to contribute to organizational growth while continuously developing practical cybersecurity and IT skills.", img: null },
+  { name: "EMMANUEL, O. VICTOR", role: "Chief Financial Officer", bio: "Building a challenging career based on diligence in a unique and performance driven organization, putting effort in fulfilling my employer's goal, while leveraging my skills to continually contribute to the attainment of the organizational objectives and my career development.", img: emmanuel.url },
+  { name: "Tukura Zhimane Aquila", role: "Full Stack Developer", bio: "A passionate Full Stack Developer specializing in building modern, responsive, and scalable web applications and websites. Skilled in front-end and back-end development, API integration, database management, and cloud deployment, with a strong interest in data science and artificial intelligence. Committed to delivering clean, efficient, and user-focused digital solutions that solve real-world problems.", img: tukura.url },
+  { name: "HABAKKUK ETSU LUCKY", role: "Digital Forensic Professional", bio: "Motivated and detail-oriented Cybersecurity Science graduate with a Second Class Upper degree from the Federal University of Technology, Minna. Passionate about cybersecurity, digital forensics, information security, and digital literacy. Possesses a strong foundation in networking, operating systems, cybersecurity principles, and computer operations, complemented by leadership experience during the National Youth Service Corps (NYSC). Eager to contribute to organizational growth while continuously developing practical cybersecurity and IT skills.", img: habakkuk.url },
 ];
 
 
