@@ -144,10 +144,6 @@ const suite = [
 const team = [
   { name: "Abdulrasheed Musa", role: "Chief Executive Officer", bio: "Over 15 years implementing flagship technological platforms and national networks across Sub-Saharan Africa.", img: ceo.url },
   { name: "Solomon Yakubu", role: "Chief Technology Officer", bio: "Expert in microservice integrations, secure high scale database setups, and robust enterprise platform architectures.", img: cto.url },
-  { name: "Patience Musa", role: "Chief Marketing Officer", bio: "Leading corporate positioning, institutional relations, and brand strategy for regional market integrations.", img: cmo.url },
-  { name: "Hamza Jimoh", role: "Chief Operating Officer", bio: "Coordinating cross-functional deployments, logistics frameworks, and daily operational safety standards.", img: coo.url },
-  { name: "Immamatu Ibrahim", role: "Business Development Executive", bio: "Finds new clients and partnerships to expand regional market operations.", img: bde.url },
-  { name: "Luqman Abubakar", role: "Network Engineer", bio: "Manages network infrastructure, enterprise server deployments, and security.", img: netEng.url },
 ];
 
 const sectors = [
