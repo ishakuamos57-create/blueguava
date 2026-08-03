@@ -593,11 +593,20 @@ function TeamSection() {
               className="group overflow-hidden rounded-3xl bg-white shadow-soft transition-all hover:shadow-brand"
             >
               <div className="relative aspect-[4/5] overflow-hidden">
-                <motion.img
-                  src={member.img}
-                  alt={member.name}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                {member.img ? (
+                  <motion.img
+                    src={member.img}
+                    alt={member.name}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center bg-gradient-brand">
+                    <span className="text-5xl font-bold text-white/90">
+                      {member.name.replace(/[^A-Za-z, ]/g, "").split(/[\s,]+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join("")}
+                    </span>
+                  </div>
+                )}
+
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-5/95 via-brand-5/40 to-transparent p-6">
                   <div className="text-xs font-semibold uppercase tracking-widest text-brand-1">{member.role}</div>
                   <div className="mt-1 text-2xl font-bold text-white">{member.name}</div>
